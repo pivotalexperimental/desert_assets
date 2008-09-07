@@ -16,3 +16,40 @@ Check it out: http://github.com/pivotal/desert
 TODO: Stuff about how Desert Assets allows your Desert plugin to provide assets
 (javascripts, stylesheets, images) without a need to copy them to the application.
 
+== Installation and Configuration
+
+* Install and configure Desert
+
+* Generate your Desert plugin
+
+    script/generate desert_plugin my_plugin
+
+* Configure your plugin to depend on Desert Assets
+
+    # File: vendor/plugin/my_plugin/init.rb
+    
+    require_plugin 'desert_assets'
+
+* Configure your application to load routes from Desert Assets
+
+    # File: config/routes.rb
+    
+    ActionController::Routing::Routes.draw do |map|
+      map.routes_from_plugin(:desert_assets)
+      
+      # ...
+    end
+
+== Usage
+
+* Javascripts:
+
+    # Example file: vendor/plugins/my_plugin/app/views/javascripts/sahara.js.erb
+    
+    function find_oasis() {
+    
+    }
+
+* Stylesheets (TODO):
+
+* Images (TODO):
