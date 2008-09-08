@@ -1,5 +1,6 @@
 = Desert Assets
 
+
 == About Desert
 Desert is a Rails plugin framework that makes it easy to share models, views,
 controllers, helpers, routes, and migrations across your applications.
@@ -11,6 +12,7 @@ Classes are automatically mixed in with your own or other plugins' classes.
 This allows you to make full featured composable components.
 
 Check it out: http://github.com/pivotal/desert
+
 
 == About Desert Assets
 TODO: Stuff about how Desert Assets allows your Desert plugin to provide assets
@@ -40,6 +42,7 @@ TODO: Stuff about how Desert Assets allows your Desert plugin to provide assets
       # ...
     end
 
+
 == Usage
 
 * Javascripts:
@@ -53,3 +56,14 @@ TODO: Stuff about how Desert Assets allows your Desert plugin to provide assets
 * Stylesheets (TODO):
 
 * Images (TODO):
+
+
+== Running Specs
+In order to run any of the provided RSpec specs, you need a Rails application with 
+these plugins installed:
+
+* desert
+* desert_assets
+* rspec
+* rspec-rails
+
