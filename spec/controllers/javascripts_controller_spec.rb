@@ -4,7 +4,7 @@ describe JavascriptsController do
   integrate_views
 
   before do
-    add_fixture_views
+    add_fixture_views(JavascriptsController)
   end
 
   it "renders" do

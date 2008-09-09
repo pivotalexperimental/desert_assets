@@ -7,6 +7,6 @@ Spec::Runner.configure do |config|
   config.fixture_path = "#{File.dirname(__FILE__)}/../spec/fixtures"
 end
 
-def add_fixture_views
-  JavascriptsController.prepend_view_path(File.join(File.dirname(__FILE__), 'fixtures', 'views'))
+def add_fixture_views(controller_class)
+  controller_class.prepend_view_path(File.join(File.dirname(__FILE__), 'fixtures', 'views'))
 end
