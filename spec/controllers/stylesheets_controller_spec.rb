@@ -5,14 +5,7 @@ describe StylesheetsController do
     add_fixture_views(StylesheetsController)
   end
 
-  describe "when a matching file is found in public" do
-    it "renders the file" do
-      get "asset", :format => "css"
-      response.body.should match(Regexp.new('/fixtures/public/stylesheets/asset.css'))
-    end
-  end
-
-  describe "when a matching file is found in app, but not in public" do
+  describe "when a matching file is found in app" do
     it "renders the file" do
       get "app_asset", :format => "css"
       response.should render_template('stylesheets/app_asset')

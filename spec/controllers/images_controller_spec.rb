@@ -5,14 +5,7 @@ describe ImagesController do
     add_fixture_views(ImagesController)
   end
 
-  describe "when a matching file is found in public" do
-    it "renders the file" do
-      get "asset", :format => "txt"
-      response.body.should match(Regexp.new('/fixtures/public/images/asset.txt'))
-    end
-  end
-
-  describe "when a matching file is found in app, but not in public" do
+  describe "when a matching file is found in app" do
     it "renders the file" do
       get "app_asset", :format => "txt"
       response.should render_template('images/app_asset')
