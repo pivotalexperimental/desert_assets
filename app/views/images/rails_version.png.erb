@@ -1,0 +1,13 @@
+<%
+  require "RMagick"
+  
+  version_string = "v. #{`rails -v`.split(' ')[1]}"
+  icon = Magick::Image.read("#{RAILS_ROOT}/public/images/rails.png").first
+
+  drawable = Magick::Draw.new
+  drawable.pointsize = 12.0
+  drawable.fill = 'black'
+  drawable.gravity = Magick::CenterGravity
+  
+  drawable.annotate(icon, 0, 0, 0, 0, version_string)
+%><%= icon.to_blob %>
