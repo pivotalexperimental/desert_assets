@@ -8,5 +8,6 @@ Spec::Runner.configure do |config|
 end
 
 def add_fixture_views(controller_class)
-  controller_class.prepend_view_path(File.join(File.dirname(__FILE__), 'fixtures', 'views'))
+  controller_class.prepend_view_path(File.join(File.dirname(__FILE__), 'fixtures', 'app', 'views'))
+  controller_class.prepend_view_path(File.join(File.dirname(__FILE__), 'fixtures', 'public'))
 end

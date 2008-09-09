@@ -1,0 +1,3 @@
+
+This file, public/images/asset.txt, should be rendered
+taking precedence over app/views/images/asset.txt.erb

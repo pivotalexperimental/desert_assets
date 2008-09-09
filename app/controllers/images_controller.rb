@@ -1,0 +1,3 @@
+class ImagesController < AssetsController
+  
+end
