@@ -67,3 +67,4 @@ these plugins installed:
 * rspec
 * rspec-rails
 
+Copyright (c) 2010 Pivotal Labs. This software is licensed under the MIT License.
